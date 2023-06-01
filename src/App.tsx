@@ -8,9 +8,13 @@ function App() {
         {message: 'message2'},
         {message: 'message3'}
     ])
+    const addButton = (title: string) => {
+        getMessage([{message: title}, ...message])
+    }
+
     return (
         <div className={'App'}>
-            <FullButton />
+            <FullButton addButton={addButton}/>
             {message.map((el, index) =>
                 <div key={index}>{el.message}</div>
             )}
