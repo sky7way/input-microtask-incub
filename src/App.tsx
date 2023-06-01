@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import './App.css';
 import {FullButton} from "./components/FullButton";
+import {Input} from "./components/Input";
+import {Button} from "./components/Button";
 
 function App() {
     let [message, getMessage] = useState([
@@ -14,7 +16,9 @@ function App() {
 
     return (
         <div className={'App'}>
-            <FullButton addButton={addButton}/>
+            {/*<FullButton addButton={addButton}/>*/}
+            <Input />
+            <Button />
             {message.map((el, index) =>
                 <div key={index}>{el.message}</div>
             )}
